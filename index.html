@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maryam & Zaviyar Ali - Wedding Invitation</title>
+    <!-- Elegant Serif Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #2b2523;
+            --card-bg: #38312e;
+            --accent-gold: #d4af37;
+            --text-light: #f5f2eb;
+            --text-muted: #c2b8ad;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-light);
+            font-family: 'Montserrat', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .invitation-card {
+            background-color: var(--card-bg);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            border-radius: 12px;
+            max-width: 480px;
+            width: 100%;
+            padding: 40px 25px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            position: relative;
+        }
+
+        .flower-decoration {
+            font-size: 24px;
+            color: var(--accent-gold);
+            margin-bottom: 15px;
+        }
+
+        h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.8rem;
+            font-weight: 400;
+            line-height: 1.2;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+        }
+
+        h1 span {
+            display: block;
+        }
+
+        .ampersand {
+            font-style: italic;
+            font-size: 2rem;
+            color: var(--accent-gold);
+            margin: 5px 0;
+        }
+
+        .divider {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .divider line {
+            width: 40px;
+            height: 1px;
+            background-color: var(--accent-gold);
+        }
+
+        .divider-icon {
+            color: var(--accent-gold);
+            margin: 0 10px;
+        }
+
+        .subtitle {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--text-muted);
+            margin-bottom: 25px;
+        }
+
+        .date-box {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            letter-spacing: 1px;
+            border-top: 1px solid rgba(212, 175, 55, 0.2);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+            padding: 12px 0;
+            margin-bottom: 30px;
+        }
+
+        .btn-open {
+            display: inline-block;
+            background-color: transparent;
+            color: var(--accent-gold);
+            border: 1px solid var(--accent-gold);
+            padding: 12px 36px;
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .btn-open:hover {
+            background-color: var(--accent-gold);
+            color: var(--bg-color);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="invitation-card">
+        <div class="flower-decoration">❦</div>
+        
+        <p class="subtitle">Cordially Invites You To The Wedding Of</p>
+
+        <h1>
+            <span>Maryam</span>
+            <span class="ampersand">&</span>
+            <span>Zaviyar Ali</span>
+        </h1>
+
+        <div class="divider">
+            <span class="divider-icon">✦</span>
+        </div>
+
+        <div class="date-box">
+            DECEMBER 18, 2026
+        </div>
+
+        <a href="details.html" class="btn-open" onclick="playMusic()">Open Invitation</a>
+
+        <!-- Background Audio (Replace audio link with your own MP3 link) -->
+        <audio id="bg-music" loop>
+            <source src="music.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
+    <script>
+    function playMusic() {
+        var audio = document.getElementById("bg-music");
+        if (audio) {
+            audio.play();
+        }
+    }
+    </script>
+</body>
+</html>
